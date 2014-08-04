@@ -1,0 +1,246 @@
+\hypertarget{classp_1_1NeuralNetwork}{\section{p\-:\-:\-Neural\-Network \-Class \-Reference}
+\label{classp_1_1NeuralNetwork}\index{p\-::\-Neural\-Network@{p\-::\-Neural\-Network}}
+}
+\subsection*{\-Public \-Member \-Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classp_1_1NeuralNetwork_a4ec206f877c28b8e71e2979e30329ebe}{\-Neural\-Network} (const std\-::vector$<$ unsigned int $>$ nb\-Nodes\-Per\-Layer)
+\item 
+\hyperlink{classp_1_1NeuralNetwork_ab0434af909567db330ee0cda44e99370}{$\sim$\-Neural\-Network} ()
+\item 
+void \hyperlink{classp_1_1NeuralNetwork_abdc9b3c37c6b241ec208e0e9612d321e}{\-Set\-Training\-Log} (const std\-::string filename)
+\item 
+void \hyperlink{classp_1_1NeuralNetwork_ac0a2e23be51d4b2362bbc42ef52d0885}{\-Set\-Batch\-Learning} (void)
+\item 
+void \hyperlink{classp_1_1NeuralNetwork_a489b8648c768f4e8a686224c04b32191}{\-Set\-Incremental\-Learning} (void)
+\item 
+void \hyperlink{classp_1_1NeuralNetwork_abdc9b3c37c6b241ec208e0e9612d321e}{\-Set\-Training\-Log} (const std\-::string filename)
+\item 
+void \hyperlink{classp_1_1NeuralNetwork_a4a19aeff57bcb5083724e450acb54b3d}{\-Set\-Generalization\-Log} (const std\-::string filename)
+\item 
+void \hyperlink{classp_1_1NeuralNetwork_a5aa0feae3126717b6aa18e32aed6ff5c}{\-Set\-Validation\-Log} (const std\-::string filename)
+\item 
+void \hyperlink{classp_1_1NeuralNetwork_aec0fd8d9d10f9391351bc096d823a338}{\-Set\-Learning\-Rate} (const double lr)
+\item 
+void \hyperlink{classp_1_1NeuralNetwork_a9769db0fa2698c55638e85e40de5d4e4}{\-Set\-Max\-Epochs} (const int max)
+\item 
+void \hyperlink{classp_1_1NeuralNetwork_aee5b025319092dec4d426bbbd0b3afce}{\-Set\-Desired\-Accuracy} (const float a)
+\item 
+void \hyperlink{classp_1_1NeuralNetwork_a6cf07a067fa61da8c2af2d1201224692}{\-Set\-Trainingset} (const std\-::vector$<$ \hyperlink{classp_1_1NNEntry}{\-N\-N\-Entry} $\ast$ $>$ \&ts)
+\item 
+void \hyperlink{classp_1_1NeuralNetwork_a08c25d9f9b9949f6f6725981c071f262}{\-Set\-Generalizationset} (const std\-::vector$<$ \hyperlink{classp_1_1NNEntry}{\-N\-N\-Entry} $\ast$ $>$ \&gs)
+\item 
+void \hyperlink{classp_1_1NeuralNetwork_a05f259a0301a153784d891c252bf3c08}{\-Train\-Network} (void)
+\item 
+void \hyperlink{classp_1_1NeuralNetwork_a003248b008b55d6020e168723d46c942}{\-Output\-Training\-Result} (void)
+\item 
+void \hyperlink{classp_1_1NeuralNetwork_a11fc85f6beabf65ee4531da6a438adca}{\-Feed\-Forward} (const std\-::vector$<$ double $>$ \&)
+\end{DoxyCompactItemize}
+
+
+\subsection{\-Constructor \& \-Destructor \-Documentation}
+\hypertarget{classp_1_1NeuralNetwork_a4ec206f877c28b8e71e2979e30329ebe}{\index{p\-::\-Neural\-Network@{p\-::\-Neural\-Network}!\-Neural\-Network@{\-Neural\-Network}}
+\index{\-Neural\-Network@{\-Neural\-Network}!p::NeuralNetwork@{p\-::\-Neural\-Network}}
+\subsubsection[{\-Neural\-Network}]{\setlength{\rightskip}{0pt plus 5cm}{\bf p\-::\-Neural\-Network\-::\-Neural\-Network} (
+\begin{DoxyParamCaption}
+\item[{const std\-::vector$<$ unsigned int $>$}]{nb\-Nodes\-Per\-Layer}
+\end{DoxyParamCaption}
+)}}\label{classp_1_1NeuralNetwork_a4ec206f877c28b8e71e2979e30329ebe}
+\-Constructor that sets the structure of the network.
+
+\-Initializes \-Network parameters to default values\-: \-\_\-max\-Epochs = 1 \-\_\-learning\-Rate = 0.\-0001 \-\_\-accuracy\-Required = 0.\-90
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em array} & of number of hidden nodes per hidden layer. \-Number of layers is given by size of input vector. \-I\-N\-P\-U\-T \-H\-A\-S \-T\-O \-B\-E $>$= 2 \\
+\hline
+\end{DoxyParams}
+\hypertarget{classp_1_1NeuralNetwork_ab0434af909567db330ee0cda44e99370}{\index{p\-::\-Neural\-Network@{p\-::\-Neural\-Network}!$\sim$\-Neural\-Network@{$\sim$\-Neural\-Network}}
+\index{$\sim$\-Neural\-Network@{$\sim$\-Neural\-Network}!p::NeuralNetwork@{p\-::\-Neural\-Network}}
+\subsubsection[{$\sim$\-Neural\-Network}]{\setlength{\rightskip}{0pt plus 5cm}{\bf p\-::\-Neural\-Network\-::$\sim$\-Neural\-Network} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{classp_1_1NeuralNetwork_ab0434af909567db330ee0cda44e99370}
+\-Default \-Destructor
+
+\-Closes the network's logs. 
+
+\subsection{\-Member \-Function \-Documentation}
+\hypertarget{classp_1_1NeuralNetwork_a11fc85f6beabf65ee4531da6a438adca}{\index{p\-::\-Neural\-Network@{p\-::\-Neural\-Network}!\-Feed\-Forward@{\-Feed\-Forward}}
+\index{\-Feed\-Forward@{\-Feed\-Forward}!p::NeuralNetwork@{p\-::\-Neural\-Network}}
+\subsubsection[{\-Feed\-Forward}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf p\-::\-Neural\-Network\-::\-Feed\-Forward} (
+\begin{DoxyParamCaption}
+\item[{const std\-::vector$<$ double $>$ \&}]{}
+\end{DoxyParamCaption}
+)}}\label{classp_1_1NeuralNetwork_a11fc85f6beabf65ee4531da6a438adca}
+\-Updates the value of each \-Node based on the weights and the previous layer.
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em values} & to give to the input layer \\
+\hline
+\end{DoxyParams}
+\hypertarget{classp_1_1NeuralNetwork_a003248b008b55d6020e168723d46c942}{\index{p\-::\-Neural\-Network@{p\-::\-Neural\-Network}!\-Output\-Training\-Result@{\-Output\-Training\-Result}}
+\index{\-Output\-Training\-Result@{\-Output\-Training\-Result}!p::NeuralNetwork@{p\-::\-Neural\-Network}}
+\subsubsection[{\-Output\-Training\-Result}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf p\-::\-Neural\-Network\-::\-Output\-Training\-Result} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classp_1_1NeuralNetwork_a003248b008b55d6020e168723d46c942}
+\-Display training results on console and write them down in the result log \hypertarget{classp_1_1NeuralNetwork_ac0a2e23be51d4b2362bbc42ef52d0885}{\index{p\-::\-Neural\-Network@{p\-::\-Neural\-Network}!\-Set\-Batch\-Learning@{\-Set\-Batch\-Learning}}
+\index{\-Set\-Batch\-Learning@{\-Set\-Batch\-Learning}!p::NeuralNetwork@{p\-::\-Neural\-Network}}
+\subsubsection[{\-Set\-Batch\-Learning}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf p\-::\-Neural\-Network\-::\-Set\-Batch\-Learning} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classp_1_1NeuralNetwork_ac0a2e23be51d4b2362bbc42ef52d0885}
+\-Enable batch learning\-: each weight change is accumulated over all patterns and the weights are updated once after the complete pass over the whole training set. \hypertarget{classp_1_1NeuralNetwork_aee5b025319092dec4d426bbbd0b3afce}{\index{p\-::\-Neural\-Network@{p\-::\-Neural\-Network}!\-Set\-Desired\-Accuracy@{\-Set\-Desired\-Accuracy}}
+\index{\-Set\-Desired\-Accuracy@{\-Set\-Desired\-Accuracy}!p::NeuralNetwork@{p\-::\-Neural\-Network}}
+\subsubsection[{\-Set\-Desired\-Accuracy}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf p\-::\-Neural\-Network\-::\-Set\-Desired\-Accuracy} (
+\begin{DoxyParamCaption}
+\item[{const float}]{a}
+\end{DoxyParamCaption}
+)}}\label{classp_1_1NeuralNetwork_aee5b025319092dec4d426bbbd0b3afce}
+\-Set average accuracy training agent should obtain before stopping
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em desired} & accuracy \\
+\hline
+\end{DoxyParams}
+\hypertarget{classp_1_1NeuralNetwork_a4a19aeff57bcb5083724e450acb54b3d}{\index{p\-::\-Neural\-Network@{p\-::\-Neural\-Network}!\-Set\-Generalization\-Log@{\-Set\-Generalization\-Log}}
+\index{\-Set\-Generalization\-Log@{\-Set\-Generalization\-Log}!p::NeuralNetwork@{p\-::\-Neural\-Network}}
+\subsubsection[{\-Set\-Generalization\-Log}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf p\-::\-Neural\-Network\-::\-Set\-Generalization\-Log} (
+\begin{DoxyParamCaption}
+\item[{const std\-::string}]{filename}
+\end{DoxyParamCaption}
+)}}\label{classp_1_1NeuralNetwork_a4a19aeff57bcb5083724e450acb54b3d}
+\-Enable a log to keep relevant generalization data
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em relative} & path of the generalization log \\
+\hline
+\end{DoxyParams}
+\hypertarget{classp_1_1NeuralNetwork_a08c25d9f9b9949f6f6725981c071f262}{\index{p\-::\-Neural\-Network@{p\-::\-Neural\-Network}!\-Set\-Generalizationset@{\-Set\-Generalizationset}}
+\index{\-Set\-Generalizationset@{\-Set\-Generalizationset}!p::NeuralNetwork@{p\-::\-Neural\-Network}}
+\subsubsection[{\-Set\-Generalizationset}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf p\-::\-Neural\-Network\-::\-Set\-Generalizationset} (
+\begin{DoxyParamCaption}
+\item[{const std\-::vector$<$ {\bf \-N\-N\-Entry} $\ast$ $>$ \&}]{gs}
+\end{DoxyParamCaption}
+)}}\label{classp_1_1NeuralNetwork_a08c25d9f9b9949f6f6725981c071f262}
+\-Set list of entries used to train the network's accuracy
+
+\hyperlink{classp_1_1NNEntry}{\-N\-N\-Entry} is an interface class\-: make object you want to learn from derive from \hyperlink{classp_1_1NNEntry}{\-N\-N\-Entry}
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em generalization} & set \\
+\hline
+\end{DoxyParams}
+\hypertarget{classp_1_1NeuralNetwork_a489b8648c768f4e8a686224c04b32191}{\index{p\-::\-Neural\-Network@{p\-::\-Neural\-Network}!\-Set\-Incremental\-Learning@{\-Set\-Incremental\-Learning}}
+\index{\-Set\-Incremental\-Learning@{\-Set\-Incremental\-Learning}!p::NeuralNetwork@{p\-::\-Neural\-Network}}
+\subsubsection[{\-Set\-Incremental\-Learning}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf p\-::\-Neural\-Network\-::\-Set\-Incremental\-Learning} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classp_1_1NeuralNetwork_a489b8648c768f4e8a686224c04b32191}
+\-Enable incremental learning\-: weights are updated in the same fashion as a gradient descent \hypertarget{classp_1_1NeuralNetwork_aec0fd8d9d10f9391351bc096d823a338}{\index{p\-::\-Neural\-Network@{p\-::\-Neural\-Network}!\-Set\-Learning\-Rate@{\-Set\-Learning\-Rate}}
+\index{\-Set\-Learning\-Rate@{\-Set\-Learning\-Rate}!p::NeuralNetwork@{p\-::\-Neural\-Network}}
+\subsubsection[{\-Set\-Learning\-Rate}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf p\-::\-Neural\-Network\-::\-Set\-Learning\-Rate} (
+\begin{DoxyParamCaption}
+\item[{const double}]{lr}
+\end{DoxyParamCaption}
+)}}\label{classp_1_1NeuralNetwork_aec0fd8d9d10f9391351bc096d823a338}
+\-Set learning rate parameter
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em learning} & rate \\
+\hline
+\end{DoxyParams}
+\hypertarget{classp_1_1NeuralNetwork_a9769db0fa2698c55638e85e40de5d4e4}{\index{p\-::\-Neural\-Network@{p\-::\-Neural\-Network}!\-Set\-Max\-Epochs@{\-Set\-Max\-Epochs}}
+\index{\-Set\-Max\-Epochs@{\-Set\-Max\-Epochs}!p::NeuralNetwork@{p\-::\-Neural\-Network}}
+\subsubsection[{\-Set\-Max\-Epochs}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf p\-::\-Neural\-Network\-::\-Set\-Max\-Epochs} (
+\begin{DoxyParamCaption}
+\item[{const int}]{max}
+\end{DoxyParamCaption}
+)}}\label{classp_1_1NeuralNetwork_a9769db0fa2698c55638e85e40de5d4e4}
+\-Set maximum number of epochs to be done in case desired accuracy is not reached
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em maximum} & number of epoch \\
+\hline
+\end{DoxyParams}
+\hypertarget{classp_1_1NeuralNetwork_abdc9b3c37c6b241ec208e0e9612d321e}{\index{p\-::\-Neural\-Network@{p\-::\-Neural\-Network}!\-Set\-Training\-Log@{\-Set\-Training\-Log}}
+\index{\-Set\-Training\-Log@{\-Set\-Training\-Log}!p::NeuralNetwork@{p\-::\-Neural\-Network}}
+\subsubsection[{\-Set\-Training\-Log}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf p\-::\-Neural\-Network\-::\-Set\-Training\-Log} (
+\begin{DoxyParamCaption}
+\item[{const std\-::string}]{filename}
+\end{DoxyParamCaption}
+)}}\label{classp_1_1NeuralNetwork_abdc9b3c37c6b241ec208e0e9612d321e}
+\-Enable a log to keep relevant training data
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em relative} & path of the training log \\
+\hline
+\end{DoxyParams}
+\hypertarget{classp_1_1NeuralNetwork_abdc9b3c37c6b241ec208e0e9612d321e}{\index{p\-::\-Neural\-Network@{p\-::\-Neural\-Network}!\-Set\-Training\-Log@{\-Set\-Training\-Log}}
+\index{\-Set\-Training\-Log@{\-Set\-Training\-Log}!p::NeuralNetwork@{p\-::\-Neural\-Network}}
+\subsubsection[{\-Set\-Training\-Log}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf p\-::\-Neural\-Network\-::\-Set\-Training\-Log} (
+\begin{DoxyParamCaption}
+\item[{const std\-::string}]{filename}
+\end{DoxyParamCaption}
+)}}\label{classp_1_1NeuralNetwork_abdc9b3c37c6b241ec208e0e9612d321e}
+\-Enable a log to keep relevant training data
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em relative} & path of the training log \\
+\hline
+\end{DoxyParams}
+\hypertarget{classp_1_1NeuralNetwork_a6cf07a067fa61da8c2af2d1201224692}{\index{p\-::\-Neural\-Network@{p\-::\-Neural\-Network}!\-Set\-Trainingset@{\-Set\-Trainingset}}
+\index{\-Set\-Trainingset@{\-Set\-Trainingset}!p::NeuralNetwork@{p\-::\-Neural\-Network}}
+\subsubsection[{\-Set\-Trainingset}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf p\-::\-Neural\-Network\-::\-Set\-Trainingset} (
+\begin{DoxyParamCaption}
+\item[{const std\-::vector$<$ {\bf \-N\-N\-Entry} $\ast$ $>$ \&}]{ts}
+\end{DoxyParamCaption}
+)}}\label{classp_1_1NeuralNetwork_a6cf07a067fa61da8c2af2d1201224692}
+\-Set list of entries used to train the network's weights
+
+\hyperlink{classp_1_1NNEntry}{\-N\-N\-Entry} is an interface class\-: make object you want to learn from derive from \hyperlink{classp_1_1NNEntry}{\-N\-N\-Entry}
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em training} & set \\
+\hline
+\end{DoxyParams}
+\hypertarget{classp_1_1NeuralNetwork_a5aa0feae3126717b6aa18e32aed6ff5c}{\index{p\-::\-Neural\-Network@{p\-::\-Neural\-Network}!\-Set\-Validation\-Log@{\-Set\-Validation\-Log}}
+\index{\-Set\-Validation\-Log@{\-Set\-Validation\-Log}!p::NeuralNetwork@{p\-::\-Neural\-Network}}
+\subsubsection[{\-Set\-Validation\-Log}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf p\-::\-Neural\-Network\-::\-Set\-Validation\-Log} (
+\begin{DoxyParamCaption}
+\item[{const std\-::string}]{filename}
+\end{DoxyParamCaption}
+)}}\label{classp_1_1NeuralNetwork_a5aa0feae3126717b6aa18e32aed6ff5c}
+\-Enable a log to keep relevant validation data
+
+
+\begin{DoxyParams}{\-Parameters}
+{\em relative} & path of the validation log \\
+\hline
+\end{DoxyParams}
+\hypertarget{classp_1_1NeuralNetwork_a05f259a0301a153784d891c252bf3c08}{\index{p\-::\-Neural\-Network@{p\-::\-Neural\-Network}!\-Train\-Network@{\-Train\-Network}}
+\index{\-Train\-Network@{\-Train\-Network}!p::NeuralNetwork@{p\-::\-Neural\-Network}}
+\subsubsection[{\-Train\-Network}]{\setlength{\rightskip}{0pt plus 5cm}void {\bf p\-::\-Neural\-Network\-::\-Train\-Network} (
+\begin{DoxyParamCaption}
+\item[{void}]{}
+\end{DoxyParamCaption}
+)}}\label{classp_1_1NeuralNetwork_a05f259a0301a153784d891c252bf3c08}
+\-Train \-Network until either desired accuracy or maximum number of epoch is reached \-The training set provided is used to update the net's values while the generalization set is used to evaluate the performances. 
+
+\-The documentation for this class was generated from the following file\-:\begin{DoxyCompactItemize}
+\item 
+\-Neural\-Network.\-hpp\end{DoxyCompactItemize}

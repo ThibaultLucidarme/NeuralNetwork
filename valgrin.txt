@@ -1,0 +1,41 @@
+ Allocate E memory slot 0x432f360
+ Allocate E memory slot 0x432f4d8
+ Allocate E memory slot 0x432f650
+ Allocate E memory slot 0x432f7d0
+ Allocate E memory slot 0x432f910
+ Allocate E memory slot 0x432fa88
+ Allocate E memory slot 0x432fc00
+ Allocate E memory slot 0x432fd80
+ Allocate memory NN slot 0xbea18b78
+
+*********************************
+training set size : 4
+generalization set size : 4
+
+--> total : 8
+
+---------------------------------
+nb_epoch : 0
+average accuracy : 4.24402e-314
+error : 1.90632e-288
+
+*********************************
+	0% --- done
+	10% --- done
+	20% --- done
+	30% --- done
+	40% --- done
+	50% --- done
+	60% --- done
+	70% --- done
+	80% --- done
+	90% --- done
+ Free E memory slot 0x432f360
+ Free E memory slot 0x432f4d8
+ Free E memory slot 0x432f650
+ Free E memory slot 0x432f7d0
+ Free E memory slot 0x432f910
+ Free E memory slot 0x432fa88
+ Free E memory slot 0x432fc00
+ Free E memory slot 0x432fd80
+ Free memory NN slot 0xbea18b78
